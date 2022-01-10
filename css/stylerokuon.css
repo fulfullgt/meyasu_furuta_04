@@ -188,7 +188,7 @@ footer{
 @media screen and (max-width: 640px) {
 
 canvas{
-    width: 300px;
+    max-width: 300px;
 }
 
 .title{
@@ -196,7 +196,7 @@ canvas{
 }
 
 article{
-    width: 350px;
+    max-width: 300px;
 }
 
 nav{

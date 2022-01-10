@@ -199,15 +199,15 @@ footer{
 @media screen and (max-width: 640px) {
 
 textarea {
-    width: 350px;
+    max-width: 300px;
 }
 
 #add{
-    width: 380px;
+    max-width: 300px;
 }
 
 #addtext{
-    width: 350px;
+    max-width: 280px;
 }
 
 .title{
