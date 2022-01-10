@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>パワハラ撲滅.com</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">パワハラ撲滅.com</a>
+        <nav>
+            <ul class="mainnav">
+                <li><a href="meyasu.html">公開目安箱</a></li>
+                <li><a href="rokuon.html">リアルタイム録音</a></li>
+                <li><a href="sodan.html">電話相談</a></li>
+            </ul>
+        </nav>
+        
+        <!-- スマホ用メニュー -->
+        <nav class="sp-nav">
+            <ul>
+               <li><a href="meyasu.html">公開目安箱</a></li>
+               <li><a href="rokuon.html">リアルタイム録音</a></li>
+               <li><a href="sodan.html">電話相談</a></li>
+               <li class="close"><span>閉じる</span></li>
+            </ul>
+        </nav>
+        <!-- スマホ用メニュー -->
+
+        <!-- ハンバーガー -->
+        <div id="hamburger">
+            <span></span>
+        </div>
+        <!-- ハンバーガー -->
+        
+    </header>
+
+<div class="maintitle">
+    <img src="img/top1.jpg" alt="">
+    <p class="title">パワハラ撲滅。
+        <br>それは全サラリーマンの願いです
+    </p>
+</div>
+
+<!-- footer -->
+<footer>
+    <p>© All rights reserved by fulfullgt</p>
+</footer>
+<!-- footer -->
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+<script>
+    // スマホ用ハンバーガー
+    $(function() {
+        // 読み込みが終わるまで待機
+       const hum = $('#hamburger, .close')
+       const nav = $('.sp-nav')
+       hum.on('click', function(){
+          nav.toggleClass('toggle');
+        //   CSS .sp-navに.toggleを追加したり消したりを相互に繰り返す
+       });
+    });
+    // スマホ用ハンバーガー
+</script>
+
+</body>
+</html>

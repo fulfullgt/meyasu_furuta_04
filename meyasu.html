@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylemeyasu.css">
+    <title>公開目安箱</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">パワハラ撲滅.com</a>
+        <nav>
+            <ul class="mainnav">
+                <li><a href="meyasu.html">公開目安箱</a></li>
+                <li><a href="rokuon.html">リアルタイム録音</a></li>
+                <li><a href="sodan.html">電話相談</a></li>
+            </ul>
+        </nav>
+        
+        <!-- スマホ用メニュー -->
+        <nav class="sp-nav">
+            <ul>
+               <li><a href="meyasu.html">公開目安箱</a></li>
+               <li><a href="rokuon.html">リアルタイム録音</a></li>
+               <li><a href="sodan.html">電話相談</a></li>
+               <li class="close"><span>閉じる</span></li>
+            </ul>
+        </nav>
+        <!-- スマホ用メニュー -->
+
+        <!-- ハンバーガー -->
+        <div id="hamburger">
+            <span></span>
+        </div>
+        <!-- ハンバーガー -->
+        
+    </header>
+
+<h1>公開目安箱</h1>    
+
+<!-- 告発カード -->
+<div class="card">
+    <p>容疑者</p>
+    <input type="text" id="uname">
+    <p>告発内容</p>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <div class="button_koku">
+        <button id="send">告発する</button>
+    </div>
+</div>
+<!-- 告発カード -->
+
+<!-- 容疑リスト -->
+<h1 class="listtitle">容疑リスト</h1>
+<div id="listall">       
+    <!-- ここに追加！！！！！！！ -->
+    <!-- ここに追加！！！！！！！ -->
+</div>
+
+<div id="button">
+    <button id="alldel">削除する</button>
+</div>
+
+<!-- footer -->
+<footer>
+    <p>© All rights reserved by fulfullgt</p>
+</footer>
+<!-- footer -->
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+<script>
+    // スマホ用ハンバーガー
+    $(function() {
+        // 読み込みが終わるまで待機
+       const hum = $('#hamburger, .close')
+       const nav = $('.sp-nav')
+       hum.on('click', function(){
+          nav.toggleClass('toggle');
+        //   CSS .sp-navに.toggleを追加したり消したりを相互に繰り返す
+       });
+    });
+    // スマホ用ハンバーガー
+
+    // 表示イベント
+    $("#send").on("click",function(){
+    const key= $("#uname").val();
+    const value= $("#text").val();
+    localStorage.setItem(key,value);
+    const html=   `
+        <div id="add">
+        <p class="adda">容疑者</p>
+        <p id="adduname">${key}</p>
+        <p class="adda">内容</p>
+        <p id="addtext">${value}</p>
+        </div>
+        `
+    $("#listall").append(html);
+    });
+    // 表示イベント
+
+    // 削除イベント
+    $("#alldel").on("click", function(){
+    localStorage.clear();
+    $("#listall").empty();
+    });
+    // 削除イベント
+
+</script>
+</body>
+</html>

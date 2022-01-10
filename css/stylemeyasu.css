@@ -1,0 +1,336 @@
+
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: underline;
+}
+
+/* カード */
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(75, 73, 73);
+    max-width: 700px;
+    border: outset 5px;
+}
+
+input {
+    width: 200px;  /* 横幅 */
+    font-size: 15px;
+    font-family:"游明朝";
+}
+
+textarea {
+	width: 400px;  /* 横幅 */
+	height: 100px; /* 高さ */
+    font-size: 15px;
+    font-family:"游明朝";
+    max-width: 500px;
+}
+
+button{
+    font-size: 15px;
+    font-weight: bold;
+    font-family:"游明朝";
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* カード */
+
+/* リスト */
+
+.listtitle{
+    margin-top: 50px;
+}
+
+#listall{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(75, 73, 73);
+    max-width: 700px;
+    border: outset 5px;
+}
+
+#add{
+    background-color: rgb(107, 106, 106);
+    max-width: 700px;
+    width: 500px;
+    border: outset 3px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.adda{
+    font-weight: bold;
+}
+
+#adduname{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: outset 2px;
+    width: 200px;
+    text-align: center;
+}
+
+#addtext{
+    max-width: 600px;
+    width: 450px;
+    margin-top: 0%;
+    border: outset 2px;
+
+}
+
+/* リスト */
+
+#button{
+    text-align: center;
+}
+
+
+/* 以下共通 */
+body {
+    background-color: black;
+    color: white;
+    font-family:"游明朝"
+  }
+
+/* ヘッダー */
+header{
+    display:flex;
+    align-items:center;
+    width:87.5%;
+    margin:0 auto;
+}
+
+ul.mainnav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    }
+    
+li {
+    font-size: 15px;
+    margin-left:15px;
+    }
+
+header a{
+    font-size: 20px;
+    margin-right:auto;
+    margin-left:0;
+    text-decoration: none;
+    color: white;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    color: rgba(255, 0, 0, 0.76);
+  }
+
+/*  ヘッダーおわり*/
+
+/* タイトル画像 */
+.maintitle{
+    position: relative;
+}
+
+.title {
+      font-weight: bold;
+      font-size: 35px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      margin:0;
+      padding:0;
+      animation-name: fadein;
+      animation-duration: 3s;
+}
+
+@keyframes fadein{
+    from{
+    opacity: 0;
+    }
+    to{
+    opacity: 1;
+    }
+}
+ 
+.maintitle img{
+    width: 100%;
+}  
+
+/* タイトル画像おわり */
+
+/* フッター */
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+/* フッター終わり */
+
+
+/* スマホ用 */
+.sp-nav {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+
+textarea {
+    width: 350px;
+}
+
+#add{
+    width: 380px;
+}
+
+#addtext{
+    width: 350px;
+}
+
+.title{
+    font-size: 25px;
+}
+
+nav{
+    display: none;
+}
+
+ /* ハンバーガー */
+#hamburger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin: 0 0 0 auto;
+}
+
+#hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-50%);
+ }
+
+ #hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+ }
+ #hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+ }
+
+.sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+ }
+
+.sp-nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+ }
+.sp-nav li {
+    margin: 0;
+    padding: 0;
+ }
+.sp-nav li span {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+ }
+.sp-nav li a, .sp-nav li span {
+    display: block;
+    padding: 20px 0;
+ }
+
+ /*基準となるli要素*/
+.sp-nav .close {
+    position: relative;
+    padding-left: 20px;
+ }
+ /*バツ印線1*/
+ .sp-nav .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg );
+ }
+ /*バツ印線2*/
+ .sp-nav .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );
+ }
+
+.toggle {
+    transform: translateY( 0 );
+    opacity: 1;
+}
+/* ハンバーガー */
+}
+/* スマホ用 */
